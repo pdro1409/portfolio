@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Monsterrat", sans-serif;
+  height: 100vh;
+  background: #050505;
+}
+.background-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -9999;
+}
+/* styling header */
+.navContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.navContainer > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  gap: 0.5rem;
+}
+.navContainer > ul > li {
+  padding: 12px 32px;
+  transition: all 0.1s ease-in;
+  border-radius: 40px;
+  position: relative;
+}
+
+.navContainer > ul > li:hover {
+  background-color: #050505;
+  cursor: pointer;
+}
+
+.navContainer > ul > li:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 40px;
+  padding: 1px; /* Controla a espessura do border */
+  background: linear-gradient(90deg, #964cf0 0%, #170033 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.navContainer > ul > li a {
+  text-decoration: none;
+  color: white;
+}
